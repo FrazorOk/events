@@ -1,0 +1,118 @@
+.pinata {
+  position: relative;
+  left: 50%;
+  opacity: 0;
+  z-index: 6;
+  transition: all 0.6s ease 0s;
+
+  button {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    top: 330px;
+    z-index: 10;
+  }
+
+  .pinata__row {
+    display: flex;
+    position: relative;
+    height: 750px;
+
+    .pinata__slider {
+      position: relative;
+      z-index: 2;
+      width: 65%;
+
+      button {
+        background-image: url(../img/icons/left.png);
+        left: 20px;
+      }
+
+      .pinata__slider_container {
+        width: 100%;
+        height: 750px;
+        overflow: hidden;
+        position: relative;
+
+        .pinata__slider_img {
+          width: 100%;
+          height: 750px;
+          background-position: center;
+          background-size: cover;
+          position: absolute;
+          transition: all ease 0.6s;
+        }
+      }
+    }
+
+    .pinata__text_container {
+      width: 60%;
+      border-bottom: 750px solid #ab40ff;
+      border-left: 130px solid transparent;
+      position: absolute;
+      left: 40%;
+      z-index: 3;
+      transition: all ease 0.6s;
+
+      button {
+        background-image: url(../img/icons/right.png);
+        left: -130px;
+      }
+
+      .pinata__text {
+        height: 750px;
+        position: absolute;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        right: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all ease 0.4s;
+        padding-right: 50px;
+
+        h3 {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 30px;
+          font-style: normal;
+          text-transform: uppercase;
+          font-weight: 500;
+          word-spacing: 8px;
+          letter-spacing: 2px;
+          position: absolute;
+          margin: 0px 0 100px 0;
+          top: 110px;
+        }
+
+        .pinata__text_p {
+          font-family: 'Yanone Kaffeesatz', sans-serif;
+          text-align: center;
+          font-size: 1.8vw;
+          line-height: 60px;
+          letter-spacing: 1px;
+          word-spacing: 2px;
+        }
+      }
+
+      .pinata-text {
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: -130px;
+        width: 130px;
+      }
+    }
+  }
+}
+
+.pinata._active {
+  opacity: 1;
+  left: 0;
+}

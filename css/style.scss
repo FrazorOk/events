@@ -1,0 +1,30 @@
+@import '_nullstyle';
+@import '_pinata';
+@import '_header';
+@import '_aboutMe';
+@import '_programs';
+@import '_footer';
+@import '_programsDetails';
+@import '_reviews';
+@import '_scene';
+
+.wrapper {
+}
+
+.animation_title {
+  font-size: 30px;
+  animation-name: moveTitle;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveTitle {
+  0% {
+    font-size: 2.1vw;
+  }
+  100% {
+    font-size: 2.2vw;
+  }
+}

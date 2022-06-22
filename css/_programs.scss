@@ -1,0 +1,320 @@
+.programs__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #ddc2f4;
+  position: relative;
+  z-index: 7;
+
+  h3 {
+    color: #601c94;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+    margin: 70px 0;
+    position: relative;
+    top: 70px;
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    position: absolute;
+  }
+}
+
+.programs__list_with_all_programs {
+  max-width: 60%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 20px 0 20px;
+  margin-top: 150px;
+
+  li {
+    z-index: 8;
+    opacity: 0;
+    position: relative;
+    top: 40px;
+  }
+
+  span {
+    display: block;
+    border-radius: 20px;
+    font-size: 1vw;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    color: white;
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ab40ff;
+    background-color: #ab40ff;
+    margin-bottom: 20px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.155);
+    cursor: pointer;
+  }
+
+  span:hover {
+    color: #ab40ff;
+    background-color: white;
+    transition: all ease 0.1s;
+  }
+
+  .programs__active {
+    color: #ab40ff;
+    background-color: white;
+  }
+}
+
+.programs__list_program {
+  margin-top: 70px;
+  position: relative;
+  opacity: 0;
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(180deg, #7d89ff 0%, #ab40ff 66.67%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.programs__row {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: space-around;
+
+  .programs__slider_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .programs__slider_main_list {
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transition: all ease 0.8s;
+  }
+
+  button {
+    background: white;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    z-index: 5;
+    position: absolute;
+    top: 328px;
+  }
+
+  .programs__list_btn_left {
+    background-image: url(../img/icons/left.png);
+    left: 5%;
+  }
+
+  .programs__list_btn_right {
+    background-image: url(../img/icons/right.png);
+    right: 5%;
+  }
+}
+
+.programs__slider {
+  width: 32%;
+  height: 550px;
+  margin-left: 140px;
+}
+
+.programs__slider_img {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 10px solid white;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.155);
+  background-position: center;
+  background-size: cover;
+  z-index: 5;
+  cursor: pointer;
+
+  .programs-opacity {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 85px;
+    border-bottom-left-radius: 85px;
+    background: rgba(255, 255, 255, 0.101);
+    opacity: 1;
+    transition: all ease 0.1s;
+  }
+
+  .programs__slider_mini {
+    width: 290px;
+    height: 80px;
+    left: 975px;
+    top: 578px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 430px;
+    z-index: 7;
+    cursor: default;
+
+    button {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #5463ff;
+      background-position: center;
+      background-size: 25%;
+      background-repeat: no-repeat;
+    }
+
+    .programs__slider_mini_left {
+      left: -12px;
+      top: 28px;
+      background-image: url(../img/icons/leftmini.png);
+    }
+
+    .programs__slider_mini_container {
+      width: 260px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding-left: 2px;
+
+      .programs__slider_mini_img {
+        width: 30%;
+        height: 85%;
+        cursor: pointer;
+        background-position: center;
+        background-size: cover;
+        margin-right: 3%;
+        z-index: 7;
+        transition: all ease 0.2s;
+      }
+
+      .programs__slider_mini_img_active {
+        width: 33.3%;
+        height: 100%;
+      }
+    }
+
+    .programs__slider_mini_right {
+      right: -12px;
+      top: 28px;
+      background-image: url(../img/icons/rightmini.png);
+    }
+  }
+}
+
+.programs__text_programs {
+  color: white;
+  width: 45%;
+  padding: 0 150px 0 30px;
+  position: relative;
+
+  h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+    word-spacing: 8px;
+    letter-spacing: 2px;
+    position: absolute;
+    margin-top: -90px;
+  }
+
+  p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 1.8vw;
+    word-spacing: 4px;
+    letter-spacing: 1.5px;
+    line-height: 50px;
+  }
+}
+
+.programs._active .programs__container h3 {
+  top: 0;
+  opacity: 1;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(1) {
+  transition: all 0.3s ease 0.2s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(2) {
+  transition: all 0.3s ease 0.4s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(3) {
+  transition: all 0.3s ease 0.6s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(4) {
+  transition: all 0.3s ease 0.8s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(5) {
+  transition: all 0.3s ease 1s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(6) {
+  transition: all 0.3s ease 1.2s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(7) {
+  transition: all 0.3s ease 1.4s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_with_all_programs li:nth-child(8) {
+  transition: all 0.3s ease 1.6s;
+  opacity: 1;
+  top: 0;
+}
+
+.programs._active .programs__list_program {
+  transition: all ease 0.8s;
+  opacity: 1;
+}

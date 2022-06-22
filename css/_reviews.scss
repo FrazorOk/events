@@ -1,0 +1,95 @@
+.reviews {
+  .reviews__container {
+    padding: 230px 150px 130px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #601c94;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 500;
+      word-spacing: 8px;
+      letter-spacing: 2px;
+      margin-bottom: 70px;
+      z-index: 7;
+      opacity: 0;
+      position: absolute;
+      top: -70px;
+    }
+
+    .reviews__imgs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 7;
+
+      .reviews__img {
+        width: 30%;
+        height: 500px;
+        cursor: pointer;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.216);
+        opacity: 0;
+        position: relative;
+        top: 300px;
+      }
+
+      .reviews__img:hover {
+        width: 35%;
+        transition: all ease 0.4s;
+      }
+
+      .img_1 {
+        background-image: url(../img/reviews/3.jpg);
+        background-size: cover;
+        transform: rotate(-10deg);
+        z-index: 4;
+      }
+
+      .img_2 {
+        background-image: url(../img/reviews/1.jpg);
+        background-size: cover;
+        z-index: 5;
+      }
+
+      .img_3 {
+        background-image: url(../img/reviews/2.jpg);
+        background-size: cover;
+        background-position: center;
+        transform: rotate(10deg);
+        z-index: 4;
+      }
+    }
+
+    p {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-size: 1.5vw;
+      line-height: 40px;
+      letter-spacing: 1px;
+      word-spacing: 2px;
+      color: #000000;
+      font-style: italic;
+      margin-top: 20px;
+      position: relative;
+      margin-top: 70px;
+    }
+  }
+}
+
+.reviews._active .reviews__imgs .reviews__img {
+  transition: all 0.8s ease 0.1s;
+  opacity: 1;
+  top: 0;
+}
+
+.reviews._active h3 {
+  transition: all 0.8s ease 0.1s;
+  opacity: 1;
+  top: 100px;
+}
